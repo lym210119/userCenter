@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="description" content="申贷网">
+	<meta name="keywords" content="申贷网">
+	<meta charset="UTF-8">
+	<meta name="referrer" content="never">
+	<!--忽略电话号码和email识别-->
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<!--当网站添加到主屏幕快速启动方式，将网站添加到主屏幕快速启动方式-->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--隐藏ios上的浏览器地址栏-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- UC默认竖屏 ，UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+	<!-- QQ强制竖屏 QQ强制全屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="x5-page-mode" content="app">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<title>个人中心</title>
+
+	<!-- css reset -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- 固定布局视口宽度，使用viewport进行缩放 -->
+	<script>
+		if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+			var version = parseFloat(RegExp.$1);
+			if (version > 2.3) {
+				var phoneScale = parseInt(window.screen.width) / 640;
+				if (/MZ-M571C/.test(navigator.userAgent)) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale= 0.5">');
+				} else if (/M571C/.test(navigator.userAgent) && /LizhiFM/.test(navigator.userAgent)) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale= 0.5">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+				}
+			} else {
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}    
+	</script>
+	<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+
+	<!-- 解决移动端300ms延迟 -->
+	<script src="js/fastclick.js"></script>
+	<script>
+		if ('addEventListener' in document) {
+			document.addEventListener('DOMContentLoaded', function () {
+				FastClick.attach(document.body);
+			}, false);
+		}
+	</script>
+
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_529227_twrpymx25m31sjor.css">
+	<link rel="stylesheet" href="css/center.css">
+
+</head>
+
+<body>
+
+	<div class="scroll-wrap">
+		<!-- 头部 head -->
+		<div class="header">
+			<div class="head-left">
+				<div class="avatar">
+					<img src="images/ad.png" alt="">
+					<p>邀请码：10100</p>
+				</div>
+			</div>
+			<div class="head-center">
+				<!-- 未登录 -->
+				<div class="noLogin" style="display:none;">
+					<p>
+						<a href="#" class="login-btn">登录送礼</a>
+						<a href="#" class="register">立即注册</a>
+					</p>
+					<p>登录后贷款服务费打六折</p>
+					<p>推荐朋友贷款单笔最高得10万元佣金</p>
+				</div>
+
+				<!-- 已登录 -->
+				<div class="login">
+					<p>
+						<a class="userName">撒贝宁啊</a>
+						<a class="userTitle">申贷行长 > </a>
+					</p>
+					<p>
+						合伙人有效期还剩365天
+					</p>
+					<p class="target">
+						<span>身份证已认证</span>
+						<span>银行卡已绑定</span>
+						<span>8.5折优惠卡</span>
+					</p>
+				</div>
+			</div>
+			<div class="head-right">
+				<a class="arrows">
+					<img src="images/arrows.png" alt="">
+				</a>
+			</div>
+		</div>
+		
+		<!-- 头部 section -->
+		<div class="section">
+
+			<a href="">
+				<em>888</em>
+				<p>
+					<span class="tag">可提现</span>
+
+				</p>
+				<span>佣金（元）</span>
+			</a>
+
+
+			<a href="">
+				<em>12800</em>
+				<p>
+					<span class="tag">签到领币</span>
+
+				</p>
+				<span>申贷币（个）</span>
+			</a>
+
+
+			<a href="">
+				<em>48</em>
+				<p>
+					<span class="tag">多邀多挣</span>
+				</p>
+				<span>邀请数（位）</span>
+			</a>
+
+
+			<a href="">
+				<em>0</em>
+				<p>
+					<span class="tag"></span>
+
+				</p>
+				<span>通知（条）</span>
+			</a>
+
+		</div>
+
+		<!-- banner 广告图 -->
+		<div class="banner">
+			<ul>
+				<li><a href="#"><img src="images/banner.png" alt=""></a></li>
+			</ul>
+		</div>
+
+		<!-- userInfo -->
+		<div class="userInfo">
+			<a href="">
+				<i class="iconfont icon-dingdan"></i>
+				<span>我的订单</span>
+			</a>
+			<a href="">
+				<i class="iconfont icon-wallet"></i>
+				<span>我的钱包</span>
+			</a>
+			<a href="">
+				<i class="iconfont icon-wodeziliao"></i>
+				<span>我的资料</span>
+			</a>
+			<a href="">
+				<i class="iconfont icon-zhangdan3"></i>
+				<span>还款账单</span>
+			</a>
+			<a href="">
+				<i class="iconfont icon-kefu"></i>
+				<span>专属客服</span>
+			</a>
+		</div>
+
+		<!-- menuItem -->
+		<div class="menuItem">
+			<ul>
+				<li><a href=""><i class="iconfont icon-fangdaijisuanqi"></i> <span>月供试算</span></a></li>
+				<li><a href=""><i class="iconfont icon-chakanruzhujindu"></i> <span>批卡进度</span></a></li>
+				<li><a href=""><i class="iconfont icon-zhengxinfuwu"></i> <span>征信查询</span></a></li>
+				<li><a href=""><i class="loanPlan iconfont icon-shu-"><em>1</em></i> <span>融资方案</span></a></li>
+			</ul>
+			<ul>
+				<li><a href=""><i class="queAsk iconfont icon-huzhuwenda"><em>1</em></i> <span>互助问答</span></a></li>
+				<li><a href=""><i class="iconfont icon-shoucang"></i> <span>收藏关注</span></a></li>
+				<li><a href=""><i class="iconfont icon-bangzhu"></i> <span>帮助中心</span></a></li>
+				<li><a href=""><i class="iconfont icon-h3"></i> <span>关于我们</span></a></li>
+			</ul>
+		</div>	
+
+		<!-- lastList -->
+		<div class="lastList">
+			<ul>
+				<li>
+					<div class="title">
+						<p>邀请好友</p>
+						<span>邀请好友注册申贷网</span>
+					</div>
+					<div class="small">
+						<span>获取服务费六折特权</span>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<p>推荐贷款</p>
+						<span>贷款成功后最高获得1%的佣金</span>
+					</div>
+					<div class="small">
+						<span>累计奖励：￥0.00</span>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<p>推荐办卡</p>
+						<span>邀请办理大额行用卡佣金50元/张</span>
+					</div>
+					<div class="small">
+						<span>累计批卡<em>0</em>张</span>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<p>培训课堂</p>
+						<span>10分钟学会开微银行</span>
+					</div>
+					<div class="small">
+						<span>行长授课 人人都是银行家</span>
+					</div>
+				</li>
+				<li>
+					<div class="title ">
+						<p>推广店铺</p>
+						<span>申贷合伙人专属店铺</span>
+					</div>
+					<div class="small">
+						<span>开微银行 躺着赚钱</span>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<p>合伙人认证</p>
+						<span>认证后开启更多功能</span>
+					</div>
+					<div class="small">
+						<span>立即认证</span>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- footInfo -->
+		<div class="footer">
+			<p>
+				<img src="images/footlogo.png" alt="">
+				<span>让贷款更简单 让金融更美好</span>
+			</p>
+			<p>
+				运钞热线：40006-80006
+				官方微信：shendai-com
+			</p>
+			<p>
+				&copy 2017 ShenDai All Rights Reserved
+			</p>
+		</div>
+	</div>
+
+
+	<!-- homeBack -->
+	<div class="homeBack">
+		<a href="">
+			<i class="iconfont icon-home"></i>
+		</a>
+		<a href="">
+			<i class="iconfont icon-prev2"></i>
+		</a>
+	</div>
+
+	<!-- 底部导航 begin -->
+	<div class="bottom-fixed">
+		<footer>
+			<a class="home" href="">
+				<span>贷款</span>
+			</a>
+			<a class="hot-call" href="">
+				<span>办信用卡</span>
+			</a>
+			<a class="start" href="">
+				<span>开始贷款</span>
+			</a>
+			<a class="user" href="">
+				<span>申贷热线</span>
+			</a>
+			<a class="more" href="">
+				<span>我的</span>
+			</a>
+		</footer>
+	</div>
+	<!-- 底部导航 end -->
+</body>
+
+</html>
